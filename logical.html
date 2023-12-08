@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+</head>
+<body>
+
+  <h2>Simple Calculator</h2>
+
+  <label for="num1">Enter Number 1:</label>
+  <input type="text" id="num1">
+
+  <br>
+  <br>
+
+  <label for="num2">Enter Number 2:</label>
+  <input type="text" id="num2">
+
+  <br>
+  <br>
+  <label for="num3">Enter Number 2:</label>
+  <input type="text" id="num3">
+
+  <br>
+  <br>
+
+  <button onclick="calculate()">Calculate</button>
+
+  <h3>Results:</h3>
+  <div id="result">
+  
+  </div>
+  <p id="result2"></p>
+
+  <script>
+    function calculate() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var num3 = parseFloat(document.getElementById('num2').value);
+
+        if(num1 > 0 && num2 > 0 && num3 > 0){
+        var res = 'all numbers are greater than zero';
+
+      }
+        else if(num1==0 || num2==0 || num3==0){
+            res= ' At least one number is 0';
+        }
+        else{
+            res='at least one number is smaller than zero';
+        }
+        if(num1!=num2!=num3)
+        {
+          res2='all numbers are not equal';
+        }
+      document.getElementById('result').innerHTML = res;
+      document.getElementById('result2').innerHTML = res2;
+    }
+  </script>
+
+</body>
+</html>
